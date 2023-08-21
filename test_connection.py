@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parent_dir = os.path.dirname(current_dir)
     sys.path.append(parent_dir)
     snowpark_config = get_snowsql_config()
-    snowpark_config['ROLE'] = 'ACCOUNTADMIN'
+    snowpark_config['ROLE'] = 'HOL_ROLE'
 
     try:
         session = Session.builder.configs(snowpark_config).create()
